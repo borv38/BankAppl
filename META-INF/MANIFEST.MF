@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Rsrc-Class-Path: ./ ojdbc14.jar
+Class-Path: .
+Rsrc-Main-Class: CSV_tool.JDBC_connection
+Main-Class: org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader
+

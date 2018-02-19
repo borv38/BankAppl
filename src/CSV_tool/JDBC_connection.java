@@ -162,9 +162,8 @@ PreparedStatement clup = con.prepareStatement(sqlDelTblclup);
     	    ps.setDate(10, frmtDate(stolbec[56])); // RecStatusDate
     	    ps.setTimestamp(11, getTime()); //
     	    ps.setTimestamp(12, getTime()); //
-            ps.addBatch();
-            ps.executeBatch();
-            System.out.println("Row " + cnt + " added to batch to UPDATE EGRUL_DATA table");
+            ps.execute();
+            System.out.println("Row " + cnt + " added to UPDATE EGRUL_DATA table");
             cnt++;      
             
             
@@ -184,10 +183,9 @@ PreparedStatement clup = con.prepareStatement(sqlDelTblclup);
     	    psf.setDate(10, frmtDate(stolbec[59])); // RecStatusDate
     	    psf.setTimestamp(11, getTime()); //
     	    psf.setTimestamp(12, getTime()); //
-            psf.addBatch();
-            psf.executeBatch();
+            psf.execute();
 
-            System.out.println("Row " + cnt + " added to batch to UPDATE EGRUL_DATA_CLOSE table");
+            System.out.println("Row " + cnt + " added to UPDATE EGRUL_DATA_CLOSE table");
             cnt++;
        //     st.close(); //???
     	}
